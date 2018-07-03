@@ -1,0 +1,32 @@
+.tabs{
+    width:100%;
+    display:flex;
+    border-bottom:1px solid #ccc;
+    
+}
+.tabs .tabs_item{
+    flex:1;
+    line-height:3em;
+    text-align:center;
+}
+.tabs .tabs_item.selector{
+    color:red;
+    position: relative;
+}
+.tabs .tabs_item.selector::after{
+    position: absolute;
+    bottom:0;
+    left:0;
+    content:"";
+    height:3px;
+    background:red;
+    animation: allWidth .2s both;
+}
+@keyframes allWidth{
+    0%{
+        width:0;
+    }
+    100%{
+        width:100%;
+    }
+}
