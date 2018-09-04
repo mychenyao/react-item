@@ -1,0 +1,116 @@
+.container{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    height: 50vh;
+}
+.left_content{
+    flex: 1;
+    overflow: auto;
+}
+.right_content{
+    flex: 2.5;
+    overflow: auto;
+}
+.left_item{
+    height:1.08rem;
+    font-size:0.24rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background:rgba(243,245,247,1);
+    font-family:MicrosoftYaHeiLight;
+    color:rgba(7,17,27,1);
+    position: relative;
+}
+.left_item::after{
+    content: '';
+    width: 90%;
+    height: 1px;
+    background:rgba(7,17,27,1);;
+    position: absolute;
+    bottom: 0;
+    opacity:0.1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.left_item.select_item {
+    background: #fff;
+}
+.right_item_title {
+    width: 100%;
+    line-height:0.52rem;
+    background:rgba(243,245,247,1);
+    font-size:0.24rem;
+    font-family:MicrosoftYaHei;
+    color:rgba(147,153,159,1);
+    padding-left: .28rem;
+}
+.prouct_container {
+    padding: 0 0.36rem;
+}
+.prouct_container_item{
+    padding: .36rem 0;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.prouct_container:last-of-type > .prouct_container_item{
+   border:none;
+}
+.prouct_container_item > img {
+    width:1.14rem;
+    height:1.14rem;
+}
+.prouct_container_item > .prouct_right_container{
+    flex: 1;
+    height: auto;
+    margin-left: .2rem;
+}
+.prouct_container_item > .prouct_right_container h3 {
+    font-size:0.28rem;
+    font-family:MicrosoftYaHei;
+    color:rgba(7,17,27,1);
+}
+.prouct_container_item > .prouct_right_container > .sales {
+    font-size:0.2rem;
+    color:rgba(147,153,159,1);
+}
+.operate_container{
+    display: flex;
+    align-items: center;
+}
+.operate_container > .item_price_container{
+    font-size:0.2rem;
+    font-family:MicrosoftYaHei;
+    color:rgba(240,20,20,1);
+    flex: 1;
+}
+.operate_container > .item_price_container > .del_price{
+    color:rgba(147,153,159,1);
+}
+.renminbi{
+    font-size: .12rem;
+}
+.operate_btn_container{
+   width: 1.4rem;
+   display: flex;
+   font-size: .2rem;
+   color:#93999F;
+   align-items: center;
+   justify-content: space-between;
+}
+.operate_btn_container .operate_btn{
+    display: block;
+    width:0.4rem;
+    height:0.4rem;
+    border-radius: 50%;
+    background: url(../../static/images/jianjian.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.operate_btn_container span{
+    font-size: .12rem;
+}
+.operate_btn_container .operate_btn.add{
+    background: url(../../static/images/add.png) no-repeat center center;
+    background-size: 100% 100%;
+}

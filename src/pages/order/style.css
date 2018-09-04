@@ -1,32 +1,123 @@
-.tabs{
+
+.banner_top{
+    width: 100%;
+    height: 4rem;
+    background:url(../../static/images/banner.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.content{
     width:100%;
-    display:flex;
-    border-bottom:1px solid #ccc;
-    
+    display: flex;
+    padding: .48rem .48rem;
 }
-.tabs .tabs_item{
-    flex:1;
-    line-height:3em;
-    text-align:center;
+.img{
+    width: 1.3rem;
+    height:1.3rem;
 }
-.tabs .tabs_item.selector{
-    color:red;
-    position: relative;
+.rigth_content{
+    flex: 1;
+    margin-left:.32rem;
+    height: 100%;
 }
-.tabs .tabs_item.selector::after{
-    position: absolute;
-    bottom:0;
-    left:0;
-    content:"";
-    height:3px;
+.right_title{
+    font-size:0.32rem;
+    font-family:MicrosoftYaHei-Bold;
+    color:rgba(255,255,255,1);
+    display: flex;
+    align-content: center;
+}
+.rigth_content p{
+    font-size:0.24rem;
+    background: none;
+    height: auto;
+    color:rgba(255,255,255,1);
+}
+.bottom_text{
+    color:rgba(255,255,255,1);
+    font-size:0.2rem;
+    font-family:MicrosoftYaHeiLight;
+    height: .48rem;
+}
+.product_name{
+    width:0.6rem;
+    height:0.36rem;
     background:red;
-    animation: allWidth .2s both;
+    line-height: 0.4rem;
+    text-align: center;
+    font-size: .28rem;
 }
-@keyframes allWidth{
-    0%{
-        width:0;
-    }
-    100%{
-        width:100%;
-    }
+.right_title h3{
+    flex: 1;
+    margin-left: .2rem;
+    font-size: .32rem;
+}
+.icon_text {
+    width: .24rem;
+    height: .24rem;
+    vertical-align: middle;
+    margin-right: .2rem;
+    display: inline-block;
+    background: url(../../static/images/jianjian_icon.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.bottom_text span{
+    font-size:0.2rem;
+    font-family:MicrosoftYaHeiLight;
+    color:rgba(255,255,255,1);
+}
+.product_sum{
+    width:0.86rem;
+    height:0.48rem;
+    background:rgba(0,0,0,1);
+    opacity:0.2;
+    border-radius:1rem;
+    text-align: center;
+    line-height: .48rem;
+    float:right;
+}
+.announcement_container {
+    background:rgba(7,17,27,.2);
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: .56rem;
+    width: 100%;
+}
+.announcement_container span{
+    font-size:0.2rem;
+    color: #fff;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family:MicrosoftYaHeiLight;
+    text-indent: 4em;
+}
+.icon::after{
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left:10px;
+    background: url(../../static/images/announcement_icon.png) no-repeat center center;
+    background-size: 100% 100%;
+    width:0.44rem;
+    height:0.24rem;
+    transform: translateY(-50%);
+}
+.tabs_container {
+    height: 1.1rem;
+    font-size:0.28rem;
+    background: #fff;
+    display: flex;
+    font-family:MicrosoftYaHei;
+    justify-content: center;
+    align-items: center;
+    color:rgba(77,85,93,1);
+}
+.tabs_container .items{
+    flex: 1;
+    text-align: center;
+}
+.select_tabs {
+   color: #F01414; 
 }

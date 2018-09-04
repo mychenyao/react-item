@@ -1,0 +1,108 @@
+@import '//at.alicdn.com/t/font_807924_p47d76pg09.css';
+.music {
+    width: 100vw;
+    height: 100vh;
+}
+.background_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+}
+.turnplate {
+    width: 5rem;
+    height: 5rem;
+    border: .8rem solid #000;
+    border-radius: 50%;
+    background:url(../../static/images/es.jpeg) no-repeat center center;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    animation:  Rotate 7s linear infinite;
+    margin-top: 1.5rem;
+}
+.display{
+    display: none
+}
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9999;
+    background: rgba(0,0,0,0.5);
+}
+.operation_container{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 3rem;
+}
+.step {
+    width: 4rem;
+    background: #534843;
+    height: 2px;
+    margin: 0 .4rem;
+    position: relative;
+}
+.step_border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #fff;
+    /* transition: all 100s linear; */
+}
+.step_border::after{
+    content: '';
+    transform: translate(50%, -50%);
+    width: 3px;
+    height: 3px;
+    border: .1rem solid #fff;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+.step_container {
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.step_time{
+    font-size: .1rem;
+    color: #fff;
+}
+
+.icon_controller{
+    color: #fff;
+    font-size: .4rem;
+}
+.fon1 {
+    font-size: .6rem;
+}
+.font1_2{
+    font-size: 1rem;
+}
+.controller{
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@keyframes Rotate {
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+@keyframes Width {
+    0% { width: 0}
+    100% { width: 100%}
+}
