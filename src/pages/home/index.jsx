@@ -3,13 +3,16 @@ import styles from './style.module.less'
 import { connect } from 'react-redux'
 import axios from "axios";
 import { Button } from 'antd-mobile';
-import {getLocalStorage, setLocalStorage} from "../../utils";
+import {getLocalStorage, setLocalStorage} from "@/utils";
 const Index = (props) => {
     const [animation, setAnimation] = useState(false)
     const [dataList] = useState([
         1, 2, 4, 5, 3, 6, 7
     ])
     useEffect(() => {
+        axios.get('/api/user/news/list/gategory?showType=2').then(res => {
+            console.log(res);
+        })
     }, [])
     const addCard = () => {
         setAnimation(true)
