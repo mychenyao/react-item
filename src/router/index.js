@@ -1,30 +1,21 @@
-
+import App from "../App";
 import React, { Component } from 'react';
-import {HashRouter, Route,Switch}from "react-router-dom"
-import App from "../App"
-import home from "../pages/home"
-import order from "../pages/order/order"
-import user from "../pages/user/user"
-import Music from "../pages/music/music"
-// import Footer from "../pages/footer/footer"
-
-import rotary from "../pages/rotary/rotary"
+import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom"
+import {routerList} from "./routerList";
 export default class routers extends Component{
  render() {
      return (
-        <HashRouter>
-             <div>
+        <BrowserRouter>
+             <App>
              {/* <Footer/> */}
                  <Switch>
-                     <Route path="/" exact component={App}/>
-                     <Route path="/home" component={home}/>
-                     <Route path="/order" component={order}/>
-                     <Route path="/rotary" component={rotary}/>
-                     <Route path="/user" component={user}/>
-                     <Route path="/music" component={Music}/>  
+                     <Redirect from={'/'}  to='/home' exact />
+                     {
+                         routerList.map(v => <Route {...v} key={v.path} />)
+                     }
                  </Switch>
-             </div>
-        </HashRouter>
+             </App>
+        </BrowserRouter>
      )
 }
 }

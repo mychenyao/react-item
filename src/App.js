@@ -1,17 +1,12 @@
-import React, { Component } from 'react';
-// import logo from './logo.svg';
-// import {Link} from "react-router-dom"
+import React from 'react';
 import './App.css';
-// import axios from "axios"
-// import { createStore } from 'redux'/
-// Component.prototype.$http=axios
-class App extends Component {
-  render() {
+import {setUserData} from './store/actions'
+import {connect} from "react-redux";
+const App = ({children}) => {
     return (
-      <div className="App">
-      </div>
-    );
-  }
+      <React.Suspense className="App" fallback={<div>loading...</div>}>
+        {children}
+      </React.Suspense>
+  )
 }
-
-export default App;
+export default connect()(App);

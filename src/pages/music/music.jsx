@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import es from '../../static/images/es.jpeg';
-// import {Link} from "react-router-dom"
 import './style.css';
-// import axios from "axios"
-// import { createStore } from 'redux'/
-import moment from 'moment'
-// Component.prototype.$http=axios
 class Music extends Component {
     constructor(props) {
         super(props)
@@ -14,22 +9,19 @@ class Music extends Component {
             targeDate: 3*60,
             countdown: "00:00"
         }
-        var maxtime = 4 * 60; //一个小时，按秒计算，自己调整!   
+        var maxtime = 4 * 60; //一个小时，按秒计算，自己调整!
         let minutes = null;
         let seconds = null;
-        let msg = null;
-        let currentDate = 0
-        let currentYou = 0
         let _this = this
                   function CountDown() {
                         if (maxtime >= 0) {
                             minutes = Math.floor(maxtime / 60);
                             seconds = Math.floor(maxtime % 60);
                             --maxtime;
-                        } 
+                        }
                         _this.setState({countdown:`${minutes<10?'0'+minutes:minutes}:${seconds<10?'0'+seconds:seconds}`})
-                  }      
-                  setInterval(CountDown,1000)  
+                  }
+                  setInterval(CountDown,1000)
     }
     stop() {
         let audio = this.refs.audio

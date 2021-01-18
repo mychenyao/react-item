@@ -1,9 +1,10 @@
-import {combineReducers} from 'redux'
-import todos from './totos'
-import visibilityFilter from './visibilityFilter'
+//生成store容器
+import { createStore, applyMiddleware } from 'redux'
+import thunkMiddleware from 'redux-thunk'
+import Reducers from './reducers'
 
-const todoApp = combineReducers({
-    todos,
-    visibilityFilter
-})
-export default todoApp
+export default function configureStore() {
+    //applyMiddleware(thunkMiddleware) 允许action函数里面可以执行异步操作
+    return createStore(Reducers, applyMiddleware(thunkMiddleware))
+
+}

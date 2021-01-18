@@ -1,20 +1,14 @@
-let nextTodoId = 0
-export const addTodo = text => {
-    return {
-        type: 'ADD_TODO',
-        id: nextTodoId++,
-        text
-    }
-}
-export const setVisibilityFilter = filter => {
-    return {
-        type: 'SET_VISIBILITY_FILTER',
-        filter
-    }
-}
-export const toggleTodo = id => {
-    return {
-        type: 'TOGGLE_TODO',
-        id
+export function setUserData(data) {
+    return dispatch => {
+         new Promise((resolve => {
+            setTimeout(() => {
+                resolve('陈尧'+666)
+            }, 3000)
+        })).then(res => {
+            dispatch({
+                type: "USER_DATA",
+                data: res
+            })
+        })
     }
 }
